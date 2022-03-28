@@ -15,8 +15,8 @@ Mysql
 
 # DDL
 
-- 查询
-  - 查询所有数据库
+## 查询
+- 查询所有数据库
 ```sql
 SHOW DATABASES;
 ```
