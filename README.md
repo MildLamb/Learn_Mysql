@@ -12,7 +12,9 @@ Mysql
 | DCL | Data Control Language | 数据控制语言，用来创建数据库用户，控制数据库的访问权限 |
 
 <hr>
+
 # DDL
+
 - 查询
   - 查询所有数据库
 ```sql
