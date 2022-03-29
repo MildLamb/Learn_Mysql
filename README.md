@@ -147,3 +147,7 @@ SELECT 字段1 [AS 别名1,字段2 [AS 别名2],... FROM 表名;
 ```sql
 SELECT DISTINCT 字段列表 FROM 表名;
 ```
+- 条件查询
+```sql
+SELECT 字段列表 FROM 表名 WHERE 条件列表;
+```
