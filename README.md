@@ -177,3 +177,5 @@ SELECT 字段列表 FROM 表名 ORDER BY 字段1 排序反式1,字段2 排序反
 ```sql
 SELECT 字段列表 FROM 表名 LIMIT 起始索引,查询记录数;
 ```
+- 执行顺序
+FROM , WHERE , GROUP BY , HAVING , SELECT , ORDER BY , LIMIT
