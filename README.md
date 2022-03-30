@@ -179,3 +179,48 @@ SELECT 字段列表 FROM 表名 LIMIT 起始索引,查询记录数;
 ```
 - 执行顺序
 FROM , WHERE , GROUP BY , HAVING , SELECT , ORDER BY , LIMIT
+
+# DCL
+## 管理用户 
+- 查询用户
+```sql
+USE mysql;
+SELECT * FROM user;
+```
+- 创建用户
+```sql
+CREATE USER '用户名'@'主机名' IDENTIFIED BY '密码';
+```
+- 修改用户密码
+```sql
+ALTER USER '用户名'@'主机名' IDENTIFIED WITH mysql_native_password BY '新密码';
+```
+- 删除用户
+```sql
+DROP USER '用户名'@'主机名';
+```
+
+## 权限控制
+| 权限 | 说明 |
+|:--:|:--:|
+| ALL,ALL PRIVILEGES | 所有权限 |
+| SELECT | 查询权限 |
+| INSERT | 插入权限 |
+| UPDATE | 修改权限 |
+| DELETE | 删除权限 |
+| ALTER | 修改表权限 |
+| DROP | 删除数据库/表/视图权限 |
+| CREATE | 创建数据库/表权限 |
+
+- 查询权限
+```sql
+SHOW GRANTS FOR '用户名'@'主机名';
+```
+- 赋予权限
+```sql
+GRANT 权限列表 ON 数据库名.表名 TO '用户名'@'主机名';
+```
+- 撤销权限
+```sql
+REVOKE 权限列表 ON 数据库名.表名 FROM '用户名'@'主机名';
+```
