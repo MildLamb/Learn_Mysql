@@ -151,3 +151,29 @@ SELECT DISTINCT 字段列表 FROM 表名;
 ```sql
 SELECT 字段列表 FROM 表名 WHERE 条件列表;
 ```
+- 聚合函数
+
+| 函数 | 功能 |
+|:--:|:--:|
+| count | 统计数量 |
+| max | 最大值 |
+| min | 最小值 |
+| avg | 平均值 |
+| sum | 求和 |
+
+- 分组查询
+```sql
+SELECT 字段列表 FROM 表名 [WHERE 条件] GROUP BY 分组字段名 [HAVING 分组后过滤条件];
+```
+where和having区别  
+1. 执行时机不同：where是分组之前进行过滤，不满足where条件，不参与分组;而having是分组之后对结果进行过滤.
+2. 判断条件不同：where不能对聚合函数进行判断，而having可以.
+
+- 排序查询（ASC-升序，DESC-降序）
+```sql
+SELECT 字段列表 FROM 表名 ORDER BY 字段1 排序反式1,字段2 排序反式2;
+```
+- 分页查询
+```sql
+SELECT 字段列表 FROM 表名 LIMIT 起始索引,查询记录数;
+```
