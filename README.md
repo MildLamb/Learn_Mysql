@@ -286,3 +286,26 @@ ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY(外键字段) REFEREN
     - 右外连接：查询右表的所有数据，以及两张表交集部分数据
   - 自连接：当前表与自身的连接查询，自连接必须使用表别名
 - 子查询
+
+### 连接查询-内连接
+- 隐式内连接
+```sql
+SELECT 字段列表 FROM 表1,表2 WHERE 条件;
+```
+- 显式内连接
+```sql
+SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 连接条件...;
+```
+### 连接查询-外连接
+- 左外连接
+```sql
+SELECT 字段列表 FROM 表1 LEFT [OUTER] JOIN 表2 ON 条件;
+```
+- 右外连接
+```sql
+SELECT 字段列表 FROM 表1 RIGHT [OUTER] JOIN 表2 ON 条件;
+```
+### 连接查询-自连接
+```sql
+SELECT 字段列表 FROM 表A 别名A JOIN 表A 别名B ON 条件;
+```
