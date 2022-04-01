@@ -373,3 +373,12 @@ START TRANSACTION 或者 BEGIN;
 | Read Commited | X | √ | √ |
 | Repeatable Read(Mysql默认) | X | X | √ |
 | Serializable | X | X | X |
+
+- 查看事务隔离级别
+```sql
+SELECT @@TRANSACTION_ISOLATION;
+```
+- 设置事务的隔离级别
+```sql
+SET [SESSION|GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITED | READ COMMITED | REPEATABLE READ | SERIALIZABLE}
+```
