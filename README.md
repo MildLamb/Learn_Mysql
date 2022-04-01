@@ -332,3 +332,20 @@ SELECT * FROM t1 WHERE column1 = (SELECT column1 FROM t2);
   - 表子查询（子查询结果为多行多列）(常用关键子IN，常作为临时表出现于FROM之后)
 
 - 根据子查询位置：分为：WHERE之后，FROM之后，SELECT之后
+
+# 事务
+- 概念：事务是一组操作的集合，它是一个不可分割的工作单位，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。
+
+### 方式一 - 修改会话的自动提交方式为手动提交，执行时判断提交还是回滚
+- 查看/设置事务提交方式
+```sql
+SELECT @@autocommit;
+SET @@autocommit = 0;
+```
+- 提交事务：COMMIT;
+- 回滚事务：ROLLBACK;
+
+### 方式二 - 开启事务
+```sql
+START TRANSACTION 或者 BEGIN;
+```
