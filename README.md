@@ -365,3 +365,11 @@ START TRANSACTION 或者 BEGIN;
 
 ### 加深幻读理解
 ![image](https://user-images.githubusercontent.com/92672384/161182128-08dcbc75-945c-46a9-adc8-10258a5b6e98.png)
+
+## 事务的隔离级别
+| 隔离级别 | 脏读 | 不可重复读 | 幻读 |
+|:--:|:--:|:--:|:--:|
+| Read Uncommited | √ | √ | √ |
+| Read Commited | X | √ | √ |
+| Repeatable Read(Mysql默认) | X | X | √ |
+| Serializable | X | X | X |
